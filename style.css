@@ -112,7 +112,7 @@ nav ul li a:hover::after{
 }
 #about a{
     color: #434448;
-    text-decoration-color: #33529b;
+    text-decoration-color: #387c99;
     text-decoration-thickness: 2.1px;
 }
 .row{
@@ -180,7 +180,7 @@ nav ul li a:hover::after{
     color: #434448;
 }
 .tab-contents ul li span{
-    color: #33529b;
+    color: #387c99;
     font-size: 15px;
 }
 .education-contents{
