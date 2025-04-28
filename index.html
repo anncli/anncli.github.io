@@ -24,10 +24,10 @@
         <div class="header-content">
             <div class="header-text">
                 <h1>Hi, I'm <span class="name">Ann Li</span>.</h1>
-                <p class="title">Computer Science Student<br>
-                    at Columbia University ♔</p>
+                <p class="title">Undergraduate Computer Science<br>
+                    Student at Columbia University ♔</p>
             </div>
-            <img src="images/self.png" class="tilted-image">
+            <img src="images/self-new.png" class="header-image">
         </div>
     </div>
 </div>
@@ -160,14 +160,17 @@
 <!-- ----------contact----------- -->
 <div id="contact">
     <div class="container-content">
-        <h1 class="sub-title">Contact Me</h1>
-        <div class="contact-list"></div>
-            <p class="contact-type"><a href="https://linkedin.com/in/anncli" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-            <p class="contact-type"><a href="https://github.com/anncli" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-    </div>
+        <h1 class="sub-title">Contact</h1>
+        <div class="contact-list">
+            <a href="https://linkedin.com/in/anncli" target="_blank" rel="noopener noreferrer" class="contact-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/anncli" target="_blank" rel="noopener noreferrer" class="contact-icon">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </div>
 </div>
-
 
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
@@ -183,6 +186,15 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
+
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+            nav.classList.add("scrolled"); // Add shadow when scrolled
+        } else {
+            nav.classList.remove("scrolled"); // Remove shadow at the top
+        }
+    });
 </script>
 
 </body>

@@ -24,11 +24,12 @@ body{
     align-items: center;
 }
 
-.tilted-image {
+.header-image {
     width: 5px; /* Adjust size */
-    padding-right: 95px;
-    width: 550px;
+    margin-left: 20px;
+    width: 400px;
     height: auto;
+    border-radius: 15px;
 }
 
 nav{
@@ -44,6 +45,12 @@ nav{
     padding: 5px 150px;
     padding-top: 15px;
     z-index: 500;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
+    transition: box-shadow 0.2s ease; /* Smooth transition for the shadow */
+}
+
+nav.scrolled {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow appears when scrolled */
 }
 
 .logo{
@@ -106,6 +113,7 @@ nav ul li a:hover::after{
 #about a{
     color: #434448;
     text-decoration-color: #33529b;
+    text-decoration-thickness: 2.1px;
 }
 .row{
     display: flex;
@@ -124,10 +132,14 @@ nav ul li a:hover::after{
 .about-col-2{
     flex-basis: 60%;
 }
+.about-col-2 p {
+    line-height: 1.2; /* Adjust the value to increase spacing */
+}
 
 .sub-title{
     font-size: 60px;
-    font-weight: 600;
+    font-weight: 700;
+    padding-bottom: 10px;
     color: #434448;
 }
 .tab-titles{
@@ -274,20 +286,23 @@ nav ul li a:hover::after{
     padding: 80px 0;
     font-size: 19px;
 }
-.contact-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 10px;
+#contact .sub-title {
+    text-align: center; /* Centers the header text */
+    margin-bottom: 20px; /* Optional: Adds spacing below the header */
 }
-.contact-type{
-    margin-bottom: 10px;
+.contact-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+    margin-top: 20px;
 }
-.contact-type a{
-    color: #434448;
+.contact-icon {
+    font-size: 40px; /* Adjust icon size */
+    color: #434448; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
-.contact-list span{
-    font-style: italic;
+.contact-icon:hover {
+    color: #6CACE4; /* Change color on hover */
 }
 
 
