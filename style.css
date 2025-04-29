@@ -170,6 +170,7 @@ nav ul li a:hover::after{
 
 .tab-contents ul li{
     list-style: none;
+    line-height: 1.2;
     font-size: 17px;
     margin-top: 20px;
     margin-bottom: 5px;
