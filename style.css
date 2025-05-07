@@ -104,6 +104,43 @@ nav ul li a:hover::after{
     font-size: 42px;
 }
 
+/* -----------tooltip------------ */
+.tooltip {
+    position: relative; /* Position the tooltip container */
+    cursor: help; /* Change cursor to a help icon to indicate interactivity */
+    color: #387c99; /* Distinct color for the text */
+    border-bottom: 2.25px dotted #387c99; /* Add a dotted underline */
+    text-decoration: none; /* Remove default text decoration */
+}
+
+.tooltip:hover {
+    color: #6CACE4; /* Change color on hover */
+    border-bottom-color: #6CACE4; /* Change underline color on hover */
+}
+
+.tooltip-text {
+    visibility: hidden; /* Hide the tooltip by default */
+    width: 220px; /* Set the width of the tooltip */
+    background-color: #387c99; /* Tooltip background color */
+    color: #fff; /* Tooltip text color */
+    text-align: center;
+    font-size: 14px;
+    padding: 8px; /* Add padding inside the tooltip */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position relative to the parent */
+    bottom: 125%; /* Position above the text */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 1; /* Ensure it appears above other elements */
+    opacity: 0; /* Make it invisible initially */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible; /* Show the tooltip on hover */
+    opacity: 1; /* Make it fully visible */
+}
+
 /* -----------about------------ */
 #about{
     padding: 80px 0;

@@ -71,10 +71,14 @@ h1{
     margin: 0px 125px;
 }
 h3{
-    font-size: 18px;
-    font-style: italic;
+    font-size: 24px;
     font-weight: normal;
     padding: 20px;
+    margin: 0px 125px;
+}
+p{
+    font-size: 18px;
+    padding: 0 20px;
     margin: 0px 125px;
 }
 a{
