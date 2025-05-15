@@ -12,7 +12,8 @@
     <div class="container">
         <nav>
             <img src="images/logo.png" class="logo">
-            <ul>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -196,6 +197,20 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+            nav.classList.add("scrolled"); // Add shadow when scrolled
+        } else {
+            nav.classList.remove("scrolled"); // Remove shadow at the top
+        }
+    });
+
+    function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show"); // Toggle the "show" class
     }
 
     window.addEventListener("scroll", function () {
