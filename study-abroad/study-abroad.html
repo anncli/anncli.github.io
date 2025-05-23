@@ -32,7 +32,7 @@
   <h2>Cultural Experience</h2>
 
   <h2>Travels</h2>
-  <p>Being in Europe meant having fast and cheap access to many cities. I had the opportunity to visit 25 cities inside and outside of Spain. 
+  <p>Of course, no study abroad experience in Europe is complete without many weekend trips I had the opportunity to visit 25 cities inside and outside of Spain. 
     Each trip added a unique chapter to my experiences, shaping how I see the world. The map below shows all the cities I've visited. 
     Click each marker to see my response to: <em>"This city..."</em></p>
   <div id="map"></div>
@@ -62,8 +62,8 @@
         [45.4371908, 12.3345898, "Venice"],
         [43.7697955, 11.2556404, "Florence"],
         [43.4714722, 10.6797912, "Pisa"],
-        [41.8933203, 12.4829321, "Rome"],
         [41.903411, 12.4528527, "Vatican City"],
+        [41.8933203, 12.4829321, "Rome"],
         [40.03221, -3.6039604, "Aranjuez"],
         [43.2630018, -2.9350039, "Bilbao", "...showed me how a common identity can bring people together to unite behind a shared goal."],
         [37.3886303, -5.9953403, "Seville"],
@@ -78,12 +78,31 @@
 
       // Loop through the cities and add markers
       cities.forEach(function(city) {
-        L.marker([city[0], city[1]])
-          .addTo(map)
-          .bindPopup(
-            "<b>" + city[2] + "</b>" +
-            (city[3] ? '<div class="popup-subtext">' + city[3] + '</div>' : '')
-          );
+        var marker = L.marker([city[0], city[1]]).addTo(map);
+        marker.bindPopup(
+          "<b>" + city[2] + "</b>" +
+          (city[3] ? '<div class="popup-subtext">' + city[3] + '</div>' : '')
+        );
+
+        let clicked = false;
+
+        marker.on('mouseover', function(e) {
+          if (!clicked) marker.openPopup();
+        });
+
+        marker.on('mouseout', function(e) {
+          if (!clicked) marker.closePopup();
+        });
+
+        marker.on('click', function(e) {
+          clicked = true;
+          marker.openPopup();
+        });
+
+        // When the popup closes (e.g., user clicks the close button), reset the flag
+        marker.on('popupclose', function(e) {
+          clicked = false;
+        });
       });
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
