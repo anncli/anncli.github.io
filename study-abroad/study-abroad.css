@@ -70,6 +70,12 @@ h1{
     padding-top: 100px;
     margin: 0px 125px;
 }
+h2{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 20px;
+    margin: 0px 125px;
+}
 h3{
     font-size: 24px;
     font-weight: normal;
@@ -136,4 +142,26 @@ a{
 
 .dropdown.open .dropdown-icon {
     transform: rotate(180deg); /* Rotate the icon when dropdown is open */
+}
+
+#map {
+    display: block;
+    height: 450px;
+    width: 50%;
+    max-width: 650px; /* Optional: prevents it from getting too wide */
+    margin: 20px auto; /* Top/bottom 20px, left/right auto for centering */
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.leaflet-popup-content {
+    text-align: center;
+    max-width: 120px;
+}
+
+.leaflet-popup-content .popup-subtext {
+    font-size: 12px;
+    line-height: 0.9;
+    margin-top: 2px;
+    color: #444; /* Optional: adjust color as needed */
 }

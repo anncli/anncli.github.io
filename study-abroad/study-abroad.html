@@ -5,6 +5,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <title>Ann's Website</title>
   <link rel="stylesheet" href="study-abroad.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
 <body>
   <nav>
@@ -19,7 +20,77 @@
       </ul>
   </nav>
 
-  <h1>Study Abroad in Madrid 🇪🇸</h1>
+  <h1>A Semester in Madrid 🇪🇸</h1>
   <h3>¡Hola Buenas!</h3>
-  <p><em>More information coming soon...</em</p>
+  <p><em>This page is under construction. More information coming soon...</em></p>
+  <br>
+  <p>During my sophomore spring semester (Spring 2025), I decided to study abroad in the historic yet vibrant city of Madrid. 
+    Having taking Spanish for four years in middle/high school, Spain was the perfect destination for me to continue exploring Spanish culture and language.</p>
+  <br>
+  <h2>Academics</h2>
+
+  <h2>Cultural Experience</h2>
+
+  <h2>Travels</h2>
+  <p>Being in Europe meant having fast and cheap access to many cities. I had the opportunity to visit 25 cities inside and outside of Spain. 
+    Each trip added a unique chapter to my experiences, shaping how I see the world. The map below shows all the cities I've visited. 
+    Click each marker to see my response to: <em>"This city..."</em></p>
+  <div id="map"></div>
+
+  <h2>Personal & Professional Growth</h2>
+
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Wait until the DOM is loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('map').setView([47, 4], 4); // Madrid coordinates
+
+      // Array of cities: [latitude, longitude, popup text]
+      var cities = [
+        [40.416775, -3.703790, "Madrid", "…showed me how mixing tradition with fresh perspectives creates a dynamic balance."],
+        [41.385063, 2.173404, "Barcelona"],
+        [39.4697065, -0.3763353, "Valencia"],
+        [40.942902, -4.108807, "Segovia", "...allowed me to see the feats of Roman engineering I learned in class up close."],
+        [38.7077507, -9.1365919, "Lisbon"],
+        [52.3730796, 4.8924534, "Amsterdam", "...showed me how openness and embracing differences can lead to a more vibrant culture."],
+        [48.8534951, 2.3483915, "Paris", "...taught me that valuing the beauty in the details cultivates quality in both form and function."],
+        [39.460918, -3.6070786, "Consuegra", "...reminded me to stay realistic and not 'tilt at windmills'."],
+        [39.8560679, -4.0239568, "Toledo", "...helped me appreciate the richness that comes from blending multiple traditions and disciplines."],
+        [45.4641943, 9.1896346, "Milan", "...taught me that a little style and elegance can turn something good into something unforgettable."],
+        [45.4371908, 12.3345898, "Venice"],
+        [43.7697955, 11.2556404, "Florence"],
+        [43.4714722, 10.6797912, "Pisa"],
+        [41.8933203, 12.4829321, "Rome"],
+        [41.903411, 12.4528527, "Vatican City"],
+        [40.03221, -3.6039604, "Aranjuez"],
+        [43.2630018, -2.9350039, "Bilbao", "...showed me how a common identity can bring people together to unite behind a shared goal."],
+        [37.3886303, -5.9953403, "Seville"],
+        [37.1734995, -3.5995337, "Granada"],
+        [43.3618625, -5.8483581, "Oviedo"],
+        [43.5449422, -5.66275, "Gijon"],
+        [43.269921, -4.9861479, "Cangas de Onís/Lagos de Covadonga"],
+        [52.510885, 13.3989367, "Berlin", "...coming soon."],
+        [50.0596288, 14.4464593, "Prague", "...coming soon."],
+        [48.2083537, 16.3725042, "Vienna", "...coming soon."]
+      ];
+
+      // Loop through the cities and add markers
+      cities.forEach(function(city) {
+        L.marker([city[0], city[1]])
+          .addTo(map)
+          .bindPopup(
+            "<b>" + city[2] + "</b>" +
+            (city[3] ? '<div class="popup-subtext">' + city[3] + '</div>' : '')
+          );
+      });
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+    });
+  </script>
+
 </body>
+</html>
