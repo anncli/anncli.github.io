@@ -1,135 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', sans-serif;
-    box-sizing: border-box;
-}
-body{
-    margin-top: 50px;
-    background: #e8e9f0;
-    color: #434448;
-}
-html {
-    overflow-y: scroll; /* Always show the vertical scrollbar */
-}
-
-
-/* NAV BAR */
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    background: #e8e9f0;
-    margin: 0px;
-    top: 0px;
-    width: 100%;
-    padding: 5px 150px;
-    padding-top: 15px;
-    z-index: 1000;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
-    transition: box-shadow 0.2s ease; /* Smooth transition for the shadow */
-}
-nav.scrolled {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow appears when scrolled */
-}
-.logo{
-    width: 140px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px;
-}
-nav ul li a{
-    color: #434448;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #6CACE4;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
-}
-
-
-/* HEADER TEXT */
-h1{
-    font-size: 50px;
-    padding: 20px;
-    padding-top: 100px;
-    margin: 0px 125px;
-}
-h3{
+/* ========== HEADER TEXT (Overrides/Specifics) ========== */
+h3 {
     font-size: 18px;
     font-style: italic;
     font-weight: normal;
     padding: 20px;
-    margin: 0px 125px;
-}
-a{
-    color: #434448;
-    text-decoration-color: #387c99;
+    margin: 0 125px;
 }
 
 
-/* COURSE DESCRIPTIONS */
+/* ========== COURSE DESCRIPTIONS DROPDOWN ========== */
 .dropdown {
     margin: 20px 145px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .dropdown-title {
     padding: 15px;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    background-color: #6CACE4;
-    color: white;
+    background: #6CACE4;
+    color: #fff;
     border-radius: 5px 5px 0 0;
     display: flex;
-    justify-content: space-between; /* Aligns text and icon on opposite sides */
-    align-items: center; /* Vertically centers the icon */
+    justify-content: space-between;
+    align-items: center;
 }
-
 .dropdown-icon {
     font-size: 16px;
-    margin: 0px 10px;
-    transition: transform 0.3s ease; /* Smooth rotation animation */
+    margin: 0 10px;
+    transition: transform 0.3s ease;
 }
-
 .dropdown-title:hover {
-    background-color: #387c99;
+    background: #387c99;
 }
-
 .dropdown-title:hover .dropdown-icon {
-    color: #d1e0f7; /* Optional: Change icon color on hover */
+    color: #d1e0f7;
 }
-
 .dropdown-content {
     display: none;
     padding: 15px;
     font-size: 16px;
-    background-color: #fff;
+    background: #fff;
     border-top: 1px solid #ccc;
 }
-
 .dropdown-content p strong {
-    font-weight: semibold;
+    font-weight: 600; /* Use 600 instead of 'semibold' for valid CSS */
 }
-
 .dropdown.open .dropdown-icon {
-    transform: rotate(180deg); /* Rotate the icon when dropdown is open */
+    transform: rotate(180deg);
 }

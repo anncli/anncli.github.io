@@ -3,13 +3,16 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ann's Website</title>
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="courses.css">
 </head>
-<body>
+<body class="subpage">
   <nav>
       <img src="../images/logo.png" class="logo">
-      <ul>
+      <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
           <li><a href="../index.html#header">Home</a></li>
           <li><a href="../index.html#about">About</a></li>
           <li><a href="../index.html#projects">Projects</a></li>
@@ -116,6 +119,16 @@
             nav.classList.remove("scrolled"); // Remove shadow at the top
         }
     });
+
+  document.addEventListener("DOMContentLoaded", function() {
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      if (hamburger && navLinks) {
+          hamburger.addEventListener('click', function() {
+              navLinks.classList.toggle('show');
+          });
+      }
+  });
   </script>
 </body>
 </html>

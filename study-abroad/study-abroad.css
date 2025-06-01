@@ -1,162 +1,33 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', sans-serif;
-    box-sizing: border-box;
-}
-body{
-    margin-top: 50px;
-    background: #e8e9f0;
-    color: #434448;
-}
-html {
-    overflow-y: scroll; /* Always show the vertical scrollbar */
-}
 
-
-/* NAV BAR */
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: fixed;
-    background: #e8e9f0;
-    margin: 0px;
-    top: 0px;
-    width: 100%;
-    padding: 5px 150px;
-    padding-top: 15px;
-    z-index: 1000;
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* No shadow initially */
-    transition: box-shadow 0.2s ease; /* Smooth transition for the shadow */
-}
-nav.scrolled {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Shadow appears when scrolled */
-}
-.logo{
-    width: 140px;
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 0px 20px;
-}
-nav ul li a{
-    color: #434448;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: #6CACE4;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
-}
-
-
-/* HEADER TEXT */
-h1{
-    font-size: 50px;
-    padding: 20px;
-    padding-top: 100px;
-    margin: 0px 125px;
-}
-h2{
+/* ========== HEADERS & TEXT ========== */
+h2 {
     font-weight: bold;
     font-size: 30px;
     padding: 20px;
-    margin: 0px 125px;
+    margin: 0 125px;
 }
-h3{
+h3 {
     font-size: 24px;
     font-weight: normal;
     padding: 20px;
-    margin: 0px 125px;
+    margin: 0 125px;
 }
-p{
+p {
     font-size: 18px;
     padding: 0 20px;
-    margin: 0px 125px;
-}
-a{
-    color: #434448;
-    text-decoration-color: #33529b;
+    margin: 0 125px;
 }
 
-
-/* COURSE DESCRIPTIONS */
-.dropdown {
-    margin: 20px 145px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.dropdown-title {
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: #6CACE4;
-    color: white;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    justify-content: space-between; /* Aligns text and icon on opposite sides */
-    align-items: center; /* Vertically centers the icon */
-}
-
-.dropdown-icon {
-    font-size: 16px;
-    margin: 0px 10px;
-    transition: transform 0.3s ease; /* Smooth rotation animation */
-}
-
-.dropdown-title:hover {
-    background-color: #33529b;
-}
-
-.dropdown-title:hover .dropdown-icon {
-    color: #d1e0f7; /* Optional: Change icon color on hover */
-}
-
-.dropdown-content {
-    display: none;
-    padding: 15px;
-    font-size: 16px;
-    background-color: #fff;
-    border-top: 1px solid #ccc;
-}
-
-.dropdown-content p strong {
-    font-weight: semibold;
-}
-
-.dropdown.open .dropdown-icon {
-    transform: rotate(180deg); /* Rotate the icon when dropdown is open */
-}
-
-
-
-/* Flex container for city list and map */
+/* ========== MAP & CITY LIST LAYOUT ========== */
 .city-map-container {
     display: flex;
     justify-content: center;
-    align-items: stretch;   /* Make both children the same height */
-    gap: 24px;              /* Reduce gap for a tighter look */
+    align-items: stretch;
+    gap: 24px;
     margin: 20px auto 40px auto;
     max-width: 1200px;
 }
 
-/* Map styling */
 #map {
     display: block;
     height: 450px;
@@ -170,36 +41,56 @@ a{
     text-align: center;
     max-width: 120px;
 }
-
 .leaflet-popup-content .popup-subtext {
     font-size: 12px;
     line-height: 0.9;
     margin-top: 2px;
-    color: #444; /* Optional: adjust color as needed */
+    color: #444;
 }
 
-/* Style the city list */
 #city-list-container {
     position: relative;
     height: 450px;
     min-width: 180px;
 }
-
 #city-list {
     height: 100%;
-    overflow-y: auto; /* Enable scrolling */
-    scrollbar-width: none; /* Firefox: hide scrollbar */
-    -ms-overflow-style: none; /* IE/Edge: hide scrollbar */
-    background-color: #fff;
+    overflow-y: auto;
+    background: #fff;
     border-radius: 10px;
+    scrollbar-width: none;         /* Firefox */
+    -ms-overflow-style: none;      /* IE/Edge */
 }
 #city-list::-webkit-scrollbar {
-    display: none; /* Chrome/Safari: hide scrollbar */
+    display: none;                 /* Chrome/Safari */
+}
+#city-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#city-list li {
+    cursor: pointer;
+    padding: 5px 12px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 16px;
+    color: #33529b;
+}
+#city-list li:hover {
+    background: #e8e9f0;
+    color: #1a2a5a;
+    font-weight: bold;
+}
+#city-list h4 {
+    margin: 8px 0 12px 0;
+    padding-left: 12px;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #city-list-down {
     position: absolute;
-    right: 0%;
+    left: 50%;
     transform: translateX(-50%);
     bottom: 8px;
     background: #33529b;
@@ -218,31 +109,4 @@ a{
 #city-list-down:hover {
     background: #6CACE4;
     opacity: 1;
-}
-
-#city-list ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#city-list li {
-    cursor: pointer;
-    padding: 5px 12px;
-    transition: background 0.2s, color 0.2s;
-    font-size: 16px;
-    color: #33529b;
-}
-
-#city-list li:hover {
-    background: #e8e9f0;
-    color: #1a2a5a;
-    font-weight: bold;
-}
-
-#city-list h4 {
-    margin: 8px 0 12px 0;    /* Remove left margin */
-    padding-left: 12px;       /* Match li padding */
-    font-weight: bold;
-    font-size: 18px;
 }

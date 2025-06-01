@@ -3,21 +3,24 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ann's Website</title>
+  <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="study-abroad.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 </head>
-<body>
+<body class="subpage">
   <nav>
-      <img src="../images/logo.png" class="logo">
-      <ul>
-          <li><a href="../index.html#header">Home</a></li>
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
-          <li><a href="/course-descriptions/courses.html">Fun Courses</a></li>
-          <li><a href="/study-abroad/study-abroad.html">Study Abroad</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
+    <img src="../images/logo.png" class="logo">
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+        <li><a href="../index.html#header">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="/course-descriptions/courses.html">Fun Courses</a></li>
+        <li><a href="/study-abroad/study-abroad.html">Study Abroad</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
   </nav>
 
   <h1>A Semester in Madrid 🇪🇸</h1>
@@ -131,6 +134,21 @@
     list.scrollBy({ top: 80, behavior: 'smooth' }); // Adjust 80 to your preferred scroll amount
 };
     });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 0) {
+            nav.classList.add("scrolled"); // Add shadow when scrolled
+        } else {
+            nav.classList.remove("scrolled"); // Remove shadow at the top
+        }
+    });
+
+    function toggleMenu() {
+        const navLinks = document.querySelector(".nav-links");
+        navLinks.classList.toggle("show"); // Toggle the "show" class
+    }
   </script>
 
 </body>
