@@ -32,10 +32,16 @@
   <h2>Cultural Experience</h2>
 
   <h2>Travels</h2>
-  <p>Of course, no study abroad experience in Europe is complete without many weekend trips I had the opportunity to visit 25 cities inside and outside of Spain. 
-    Each trip added a unique chapter to my experiences, shaping how I see the world. The map below shows all the cities I've visited. 
-    Click each marker to see my response to: <em>"This city..."</em></p>
-  <div id="map"></div>
+  <p>Of course, no study abroad experience in Europe is complete without many weekend trips. I had the opportunity to visit 25 cities around Spain and Europe, and 
+    each trip added its own flavor to the way I see the world. Pick a marker on the map below to see what stuck with me the most from each city.</p>
+  
+  <div class="city-map-container">
+    <div id="city-list-container" style="position: relative;">
+      <div id="city-list"></div>
+      <button id="city-list-down" aria-label="Scroll down cities">&#8595;</button>
+    </div>
+    <div id="map"></div>
+  </div>
 
   <h2>Personal & Professional Growth</h2>
 
@@ -45,9 +51,8 @@
   <script>
     // Wait until the DOM is loaded
     document.addEventListener("DOMContentLoaded", function() {
-      var map = L.map('map').setView([47, 4], 4); // Madrid coordinates
+      var map = L.map('map').setView([47, 4], 4);
 
-      // Array of cities: [latitude, longitude, popup text]
       var cities = [
         [40.416775, -3.703790, "Madrid", "…showed me how mixing tradition with fresh perspectives creates a dynamic balance."],
         [41.385063, 2.173404, "Barcelona"],
@@ -65,49 +70,66 @@
         [41.903411, 12.4528527, "Vatican City"],
         [41.8933203, 12.4829321, "Rome"],
         [40.03221, -3.6039604, "Aranjuez"],
-        [43.2630018, -2.9350039, "Bilbao", "...showed me how a common identity can bring people together to unite behind a shared goal."],
+        [43.2630018, -2.9350039, "Bilbao", "Watching the entire city turn into a sea of jerseys and flags on game day; showed me how a common identity can bring people together to unite behind a shared goal."],
         [37.3886303, -5.9953403, "Seville"],
         [37.1734995, -3.5995337, "Granada"],
         [43.3618625, -5.8483581, "Oviedo"],
         [43.5449422, -5.66275, "Gijon"],
-        [43.269921, -4.9861479, "Cangas de Onís/Lagos de Covadonga"],
+        [43.269921, -4.9861479, "Cangas de Onís"],
         [52.510885, 13.3989367, "Berlin", "...coming soon."],
         [50.0596288, 14.4464593, "Prague", "...coming soon."],
         [48.2083537, 16.3725042, "Vienna", "...coming soon."]
       ];
 
-      // Loop through the cities and add markers
-      cities.forEach(function(city) {
+      var markers = [];
+
+      // Add markers and collect references
+      cities.forEach(function(city, idx) {
         var marker = L.marker([city[0], city[1]]).addTo(map);
         marker.bindPopup(
           "<b>" + city[2] + "</b>" +
           (city[3] ? '<div class="popup-subtext">' + city[3] + '</div>' : '')
         );
+        markers.push(marker);
 
+        // (Keep your hover/click logic here if you want)
         let clicked = false;
-
-        marker.on('mouseover', function(e) {
-          if (!clicked) marker.openPopup();
-        });
-
-        marker.on('mouseout', function(e) {
-          if (!clicked) marker.closePopup();
-        });
-
-        marker.on('click', function(e) {
-          clicked = true;
-          marker.openPopup();
-        });
-
-        // When the popup closes (e.g., user clicks the close button), reset the flag
-        marker.on('popupclose', function(e) {
-          clicked = false;
-        });
+        marker.on('mouseover', function(e) { if (!clicked) marker.openPopup(); });
+        marker.on('mouseout', function(e) { if (!clicked) marker.closePopup(); });
+        marker.on('click', function(e) { clicked = true; marker.openPopup(); });
+        marker.on('popupclose', function(e) { clicked = false; });
       });
+
+      
+      // Generate the city list
+      var cityListDiv = document.getElementById('city-list');
+
+
+      // Add a header
+      var header = document.createElement('h4');
+      header.textContent = "Cities List";
+      cityListDiv.appendChild(header);
+
+      var ul = document.createElement('ul');
+      cities.forEach(function(city, idx) {
+        var li = document.createElement('li');
+        li.textContent = city[2];
+        li.onclick = function() {
+          map.setView([city[0], city[1]], 7, { animate: true });
+          markers[idx].openPopup();
+        };
+        ul.appendChild(li);
+      });
+      cityListDiv.appendChild(ul);
 
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
+
+      document.getElementById('city-list-down').onclick = function() {
+    var list = document.getElementById('city-list');
+    list.scrollBy({ top: 80, behavior: 'smooth' }); // Adjust 80 to your preferred scroll amount
+};
     });
   </script>
 

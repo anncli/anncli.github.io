@@ -144,12 +144,24 @@ a{
     transform: rotate(180deg); /* Rotate the icon when dropdown is open */
 }
 
+
+
+/* Flex container for city list and map */
+.city-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;   /* Make both children the same height */
+    gap: 24px;              /* Reduce gap for a tighter look */
+    margin: 20px auto 40px auto;
+    max-width: 1200px;
+}
+
+/* Map styling */
 #map {
     display: block;
     height: 450px;
     width: 50%;
-    max-width: 650px; /* Optional: prevents it from getting too wide */
-    margin: 20px auto; /* Top/bottom 20px, left/right auto for centering */
+    max-width: 650px;
     border-radius: 10px;
     box-sizing: border-box;
 }
@@ -164,4 +176,73 @@ a{
     line-height: 0.9;
     margin-top: 2px;
     color: #444; /* Optional: adjust color as needed */
+}
+
+/* Style the city list */
+#city-list-container {
+    position: relative;
+    height: 450px;
+    min-width: 180px;
+}
+
+#city-list {
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling */
+    scrollbar-width: none; /* Firefox: hide scrollbar */
+    -ms-overflow-style: none; /* IE/Edge: hide scrollbar */
+    background-color: #fff;
+    border-radius: 10px;
+}
+#city-list::-webkit-scrollbar {
+    display: none; /* Chrome/Safari: hide scrollbar */
+}
+
+#city-list-down {
+    position: absolute;
+    right: 0%;
+    transform: translateX(-50%);
+    bottom: 8px;
+    background: #33529b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(51,82,155,0.08);
+    opacity: 0.85;
+    transition: background 0.2s, opacity 0.2s;
+    z-index: 2;
+}
+#city-list-down:hover {
+    background: #6CACE4;
+    opacity: 1;
+}
+
+#city-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#city-list li {
+    cursor: pointer;
+    padding: 5px 12px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 16px;
+    color: #33529b;
+}
+
+#city-list li:hover {
+    background: #e8e9f0;
+    color: #1a2a5a;
+    font-weight: bold;
+}
+
+#city-list h4 {
+    margin: 8px 0 12px 0;    /* Remove left margin */
+    padding-left: 12px;       /* Match li padding */
+    font-weight: bold;
+    font-size: 18px;
 }
