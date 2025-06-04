@@ -92,7 +92,7 @@ nav ul li a:hover::after{
         position: fixed;
         top: 0;
         width: 100%;
-        background: #e8e9f0;
+        background: #e8e9f0;    
         z-index: 1000;
     }
     nav.scrolled {
@@ -136,5 +136,18 @@ nav ul li a:hover::after{
         border: none;
         cursor: pointer;
         color: #434448;
+    }
+
+    body.subpage {
+        margin-top: 110px; /* adjusted for nav bar */
+        text-align: center;
+        width: 100%;
+    }
+    body.subpage h1 {
+        font-size: 2em;
+        padding: 0px 50px 15px 50px;
+        margin: 0;
+        text-align: center;
+        box-sizing: border-box;
     }
 }
