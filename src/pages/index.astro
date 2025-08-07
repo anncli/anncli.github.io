@@ -17,7 +17,7 @@ const formatDate = (date: Date | undefined) => {
   if (!date) return "";
   return date.toLocaleDateString("en-US", {
     month: "short",
-    day: "numeric",
+    year: "numeric",
   });
 };
 
@@ -58,6 +58,31 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
           </div>
         )
       }
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>{site.sections.experience.title}</h2>
+        <a href="/experience">{site.sections.experience.viewAllText}</a>
+      </div>
+      <div class="content-list">
+        {
+          sortedExperiences.map((exp) => (
+            <article>
+              <div class="title-row">
+                <div class="company-info">
+                  <img src={exp.data.logo} alt="" class="company-logo" />
+                  <span>{exp.data.title}</span>
+                </div>
+                <time>
+                  {formatDate(exp.data.startDate)} - {exp.data.current ? "Present" : formatDate(exp.data.endDate)}
+                </time>
+              </div>
+              <p class="muted-text">{exp.data.description}</p>
+            </article>
+          ))
+        }
+      </div>
     </section>
 
     <Section>
@@ -108,31 +133,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
           ))
         }
       </ContentList>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <h2>{site.sections.experience.title}</h2>
-        <a href="/experience">{site.sections.experience.viewAllText}</a>
-      </div>
-      <div class="content-list">
-        {
-          sortedExperiences.slice(0, 2).map((exp) => (
-            <article>
-              <div class="title-row">
-                <div class="company-info">
-                  <img src={exp.data.logo} alt="" class="company-logo" />
-                  <span>{exp.data.title}</span>
-                </div>
-                <time>
-                  {formatDate(exp.data.startDate)} - {exp.data.current ? "Present" : formatDate(exp.data.endDate)}
-                </time>
-              </div>
-              <p class="muted-text">{exp.data.description}</p>
-            </article>
-          ))
-        }
-      </div>
     </section>
   </Container>
 </BaseLayout>

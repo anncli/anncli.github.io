@@ -1,9 +1,13 @@
 {
   "home": {
-    "name": "ByteKai",
-    "title": "Software Engineer & Curious Tinkerer",
-    "introduction": "I’m constantly learning and evolving. I love diving into new ideas and finding creative ways to solve problems.",
+    "name": "Ann Li",
+    "title": "Undergraduate Computer Science Student at Columbia University ♔",
+    "introduction": "I am an incoming third-year computer science student interested in exploring different uses of software. My experience range from six years of competitive robotics programming to learning the applications of software in quantitative finance at the Jane Street Academy of Math and Programming. In my free time, I am a recreational speedcuber, world explorer (via learning languages, playing GeoGuessr, and studying abroad), and avid 脑综 watcher.",
     "sections": {
+      "experience": {
+        "title": "Experience",
+        "viewAllText": "View full résumé"
+      },
       "blog": {
         "title": "Writing",
         "viewAllText": "View all posts"
@@ -11,20 +15,16 @@
       "projects": {
         "title": "Projects",
         "viewAllText": "View all projects"
-      },
-      "experience": {
-        "title": "Experience",
-        "viewAllText": "View full résumé"
       }
     },
     "socialLinks": [
       {
-        "platform": "GitHub",
-        "url": "https://github.com/bytekai"
+        "platform": "LinkedIn",
+        "url": "https://www.linkedin.com/in/anncli"
       },
       {
-        "platform": "Twitter",
-        "url": "https://x.com/byteekai"
+        "platform": "GitHub",
+        "url": "https://github.com/anncli"
       }
     ]
   }
