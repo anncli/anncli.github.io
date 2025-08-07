@@ -55,7 +55,7 @@ p {
 #city-list {
     height: 100%;
     overflow-y: auto;
-    background: #fff;
+    background: #e8e9f0;
     border-radius: 10px;
     scrollbar-width: none;         /* Firefox */
     -ms-overflow-style: none;      /* IE/Edge */

@@ -9,7 +9,7 @@ html {
     overflow-y: scroll;
 }
 body {
-    background: #e8e9f0;
+    background: #fefefe;
     color: #434448;
 }
 a {
@@ -36,7 +36,7 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     position: fixed;
-    background: #e8e9f0;
+    background: #fefefe;
     margin: 0px;
     top: 0px;
     width: 100%;
@@ -92,7 +92,7 @@ nav ul li a:hover::after{
         position: fixed;
         top: 0;
         width: 100%;
-        background: #e8e9f0;    
+        background: #fefefe;    
         z-index: 1000;
     }
     nav.scrolled {
@@ -103,7 +103,7 @@ nav ul li a:hover::after{
         flex-direction: column;
         align-items: center;
         width: 100%;
-        background: #e8e9f0;
+        background: #fefefe;
         position: absolute;
         top: 60px;
         left: 0;
