@@ -6,18 +6,20 @@ import "leaflet/dist/leaflet.css";
 const Map = ({ markers }) => {
   const mapRef = useRef(null);
   const markerRefs = useRef([]);
+  const [selectedIdx, setSelectedIdx] = React.useState(null);
 
   useEffect(() => {
     const map = L.map("map");
     mapRef.current = map;
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "© OpenStreetMap contributors",
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      attribution: "&copy; <a href='https://carto.com/attributions'>CARTO</a>"
     }).addTo(map);
 
     // Use explicit Leaflet icon with correct anchor
+    // Use a muted blue marker icon for black & white map
     const defaultIcon = L.icon({
-      iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-      iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+      iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-grey.png",
+      iconRetinaUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
       shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
       iconSize: [22, 35],
       iconAnchor: [11, 10], // Adjust icon offset
@@ -46,6 +48,7 @@ const Map = ({ markers }) => {
 
   // City list click handler
   const handleCityClick = (idx) => {
+    setSelectedIdx(idx);
     const marker = markerRefs.current[idx];
     if (marker && mapRef.current) {
       mapRef.current.setView(marker.getLatLng(), 7, { animate: true });
@@ -57,10 +60,18 @@ const Map = ({ markers }) => {
     <div style={{ display: "flex", gap: "2rem" }}>
       <div id="map" style={{ height: "400px", width: "100%" }} />
       <div style={{ minWidth: "180px", maxHeight: "400px", overflowY: "auto", padding: "0 1rem" }}>
-        <h4>Cities List</h4>
+        <h4 style={{ marginTop: "0.8rem" }}>Cities List</h4>
         <ul style={{ listStyle: "none", padding: 0 }}>
           {markers.map((m, idx) => (
-            <li key={m.city} style={{ cursor: "pointer", marginBottom: "0.5rem" }} onClick={() => handleCityClick(idx)}>
+            <li
+              key={m.city}
+              style={{
+                cursor: "pointer",
+                fontWeight: selectedIdx === idx ? "bold" : undefined,
+                transition: "background 0.2s"
+              }}
+              onClick={() => handleCityClick(idx)}
+            >
               {m.city}
             </li>
           ))}
@@ -71,3 +82,17 @@ const Map = ({ markers }) => {
 };
 
 export default Map;
+// Custom style for Leaflet popup font size
+if (typeof window !== "undefined") {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .leaflet-popup-content {
+      font-size: 0.9em;
+      line-height: 1.1;
+      max-width: 15em;
+      word-break: break-word;
+      margin: 1em 1.2em;
+    }
+  `;
+  document.head.appendChild(style);
+}
