@@ -5,6 +5,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseLayout from "../components/layout/BaseLayout.astro";
 import ContentList from "../components/shared/ContentList.astro";
 import Container from "../components/ui/Container.astro";
+import renderMarkdown from "../utils/markdown";
 
 const siteConfig = await getEntry("site", "home");
 if (!siteConfig) {
@@ -41,12 +42,14 @@ const projects = await getCollection("projects");
 const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 3);
 ---
 
-<BaseLayout title={`${site.name} - Portfolio`} description={site.introduction}>
+<BaseLayout title={`${site.name}'s Website`} description={site.introduction}>
   <Container>
     <section class="hero">
       <h1>{site.name}</h1>
       <p class="subtitle">{site.title}</p>
-      <p class="introduction">{site.introduction}</p>
+      <div class="introduction">
+        I am an incoming third-year computer science student interested in exploring different uses of software. My experience range from optimizing system software at the edge of physical AI as a SWE Intern at NVIDIA to learning the applications of software in quantitative finance as a Jane Street AMP Scholar. In my free time, I am a <a href="https://www.worldcubeassociation.org/persons/2023LIAN29" target="_blank" rel="noopener noreferrer">recreational speedcuber</a>, world explorer (via <a href="https://www.duolingo.com/profile/inexerror" target="_blank" rel="noopener noreferrer">learning languages</a>, playing <a href="https://www.geoguessr.com/user/5edd635afa7bc40e2ccd562a" target="_blank" rel="noopener noreferrer">GeoGuessr</a>, and studying abroad), and avid <span class="tooltip">脑综<span class="tooltip-text">Short for 脑力综艺. A category of Chinese variety TV shows where contestants solve puzzles and compete in mathematical, logical, and tactical challenges.</span></span> watcher.
+      </div>
       {
         site.socialLinks && (
           <div class="social-links">
@@ -85,27 +88,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
       </div>
     </section>
 
-    <Section>
-      <div class="section-header">
-        <h2>{site.sections.blog.title}</h2>
-        <a href="/blog">{site.sections.blog.viewAllText}</a>
-      </div>
-      <ContentList>
-        {
-          latestPosts.map((post) => (
-            <article>
-              <div class="title-row">
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
-                {post.data.publishedAt && (
-                  <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
-                )}
-              </div>
-              <p class="muted-text">{post.data.description}</p>
-            </article>
-          ))
-        }
-      </ContentList>
-    </Section>
 
     <section class="section">
       <div class="section-header">
@@ -134,6 +116,28 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
         }
       </ContentList>
     </section>
+
+    <Section>
+      <div class="section-header">
+        <h2>{site.sections.blog.title}</h2>
+        <a href="/blog">{site.sections.blog.viewAllText}</a>
+      </div>
+      <ContentList>
+        {
+          latestPosts.map((post) => (
+            <article>
+              <div class="title-row">
+                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+                {post.data.publishedAt && (
+                  <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
+                )}
+              </div>
+              <p class="muted-text">{post.data.description}</p>
+            </article>
+          ))
+        }
+      </ContentList>
+    </Section>
   </Container>
 </BaseLayout>
 
@@ -152,6 +156,8 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
   .introduction {
     margin: 1.5rem 0;
     opacity: 0.9;
+    position: relative;
+    overflow: visible;
   }
 
   .section {
@@ -208,6 +214,41 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
     gap: 1rem;
     margin-top: 2rem;
     opacity: 0.7;
+  }
+
+  .tooltip {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    color: var(--text-muted);
+    text-decoration: underline dotted var(--text-muted);
+    text-underline-offset: 0.2em;
+  }
+  .tooltip .tooltip-text {
+    /* Pop up box styles */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 120%;
+    transform: translateX(-50%);
+    width: 18em;
+    background: var(--text-color);
+    /* Text styles */
+    color: var(--bg-color);
+    text-align: center;
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    white-space: pre-line;
+    z-index: 100;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
   }
 
   @media (max-width: 640px) {

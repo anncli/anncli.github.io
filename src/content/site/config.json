@@ -2,19 +2,19 @@
   "home": {
     "name": "Ann Li",
     "title": "Undergraduate Computer Science Student at Columbia University ♔",
-    "introduction": "I am an incoming third-year computer science student interested in exploring different uses of software. My experience range from six years of competitive robotics programming to learning the applications of software in quantitative finance at the Jane Street Academy of Math and Programming. In my free time, I am a recreational speedcuber, world explorer (via learning languages, playing GeoGuessr, and studying abroad), and avid 脑综 watcher.",
+    "introduction": "",
     "sections": {
       "experience": {
         "title": "Experience",
         "viewAllText": "View full résumé"
       },
-      "blog": {
-        "title": "Writing",
-        "viewAllText": "View all posts"
-      },
       "projects": {
         "title": "Projects",
         "viewAllText": "View all projects"
+      },
+      "blog": {
+        "title": "Blogs",
+        "viewAllText": "View all posts"
       }
     },
     "socialLinks": [
