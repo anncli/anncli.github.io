@@ -12,10 +12,15 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.1.0",
+    "@astrojs/mdx": "^4.3.3",
+    "@astrojs/react": "^4.3.0",
     "@fontsource/inter": "^5.1.1",
     "@fontsource/roboto-mono": "^5.1.1",
     "@fontsource/source-sans-pro": "^5.1.0",
-    "astro": "^5.1.2"
+    "astro": "^5.1.2",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",
