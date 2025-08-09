@@ -58,8 +58,8 @@ const Map = ({ markers }) => {
 
   return (
     <div style={{ display: "flex", gap: "2rem" }}>
-      <div id="map" style={{ height: "400px", width: "100%" }} />
-      <div style={{ minWidth: "180px", maxHeight: "400px", overflowY: "auto", padding: "0 1rem" }}>
+      <div id="map" style={{ maxHeight: "25rem", width: "100%" }} />
+      <div style={{ minWidth: "10rem", maxHeight: "25rem", overflowY: "auto", padding: "0 0.7rem" }}>
         <h4 style={{ marginTop: "0.8rem" }}>Cities List</h4>
         <ul style={{ listStyle: "none", padding: 0 }}>
           {markers.map((m, idx) => (
@@ -87,8 +87,8 @@ if (typeof window !== "undefined") {
   const style = document.createElement("style");
   style.innerHTML = `
     .leaflet-popup-content {
-      font-size: 0.9em;
-      line-height: 1.1;
+      font-size: 0.85em;
+      line-height: 1.15;
       max-width: 15em;
       word-break: break-word;
       margin: 1em 1.2em;
