@@ -39,7 +39,7 @@ const sortedExperiences = experiences.sort(
 );
 
 const projects = await getCollection("projects");
-const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 3);
+const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 2);
 ---
 
 <BaseLayout title={`${site.name}'s Website`} description={site.introduction}>

@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../components/layout/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import Container from "../../components/ui/Container.astro";
+
+const projects = await getCollection("projects");
+const sortedProjects = projects.sort(
+  (a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) =>
+    b.data.startDate?.getTime?.() - a.data.startDate?.getTime?.()
+);
+---
+
+<BaseLayout title="Projects" description="All projects">
+  <Container>
+    <section class="section">
+      <div class="section-header">
+        <h2>Projects</h2>
+      </div>
+      <div class="content-list">
+        {
+          sortedProjects.map((project) => (
+            <article>
+              <div class="title-row">
+                <a href={project.data.url} target="_blank" rel="noopener noreferrer">
+                  {project.data.title}
+                </a>
+              </div>
+              <p class="description">{project.data.description}</p>
+              {project.data.techs && (
+                <div class="tags">
+                  {project.data.techs.map((tech) => (
+                    <span>{tech}</span>
+                  ))}
+                </div>
+              )}
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </Container>
+</BaseLayout>
+<style>
+  .section {
+    margin: 4rem 0;
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+  }
+
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: var(--text-sm);
+  }
+
+  .description {
+    opacity: 0.9;
+    font-size: var(--text-sm);
+    margin-top: 0.5rem;
+  }
+
+  .tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tags span {
+    font-size: var(--text-xs);
+    opacity: 0.5;
+  }
+</style>

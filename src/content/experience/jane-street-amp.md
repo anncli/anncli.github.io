@@ -1,7 +1,7 @@
 ---
 title: "Academy of Math and Programming Scholar @ Jane Street"
 logo: "/images/companies/jane_street_logo.svg"
-description: "Led the development of a microservices-based e-commerce platform serving 1M+ users. Improved system performance by 40% through optimization and caching strategies. Mentored junior developers and implemented CI/CD pipelines."
+description: "Spent 5 weeks studying number theory, combinatorics, and computer science under IMO coaches."
 startDate: "2023-07-02"
 endDate: "2023-08-05"
 current: false

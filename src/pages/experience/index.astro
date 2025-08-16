@@ -1,0 +1,86 @@
+---
+import BaseLayout from "../../components/layout/BaseLayout.astro";
+import { getEntry, render } from "astro:content";
+const resume = await getEntry("blog", "resume");
+const { Content } = resume ? await render(resume) : { Content: null };
+---
+<BaseLayout title={(resume && resume.data && resume.data.title) ? resume.data.title : "Experience"} description={(resume && resume.data && resume.data.description) ? resume.data.description : "All experiences"}>
+  <main>
+    <article class="post">
+      <header>
+        <h1>{(resume && resume.data && resume.data.title) ? resume.data.title : "Experience"}</h1>
+        {(resume && resume.data && resume.data.publishedAt) && (
+          <time datetime={resume.data.publishedAt}>
+            {new Date(resume.data.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </time>
+        )}
+      </header>
+      <div class="content">
+        {Content ? <Content /> : <p>No experience content found.</p>}
+      </div>
+    </article>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .post {
+    margin-top: 2rem;
+  }
+
+  header {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .content {
+    line-height: 1.7;
+  }
+
+  .content :global(h2) {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .content :global(h3) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .content :global(p) {
+    margin-bottom: 1.25rem;
+  }
+
+  .content :global(img) {
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .content :global(blockquote) {
+    border-left: 3px solid var(--border-color);
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    color: var(--text-muted);
+  }
+
+  .content :global(pre) {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: var(--hover-bg);
+    overflow-x: auto;
+    margin: 1.5rem 0;
+  }
+</style>
