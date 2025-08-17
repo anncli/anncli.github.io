@@ -7,4 +7,5 @@ export default defineConfig({
   prefetch: true,
   compressHTML: true,
   integrations: [mdx(), react()],
+  site: 'https://anncli.github.io',
 });
