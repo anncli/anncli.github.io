@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../../components/layout/BaseLayout.astro";
 import { getEntry, render } from "astro:content";
-const resume = await getEntry("blog", "resume");
+const resume = await getEntry("resume", "resume");
 const { Content } = resume ? await render(resume) : { Content: null };
 ---
 <BaseLayout title={(resume && resume.data && resume.data.title) ? resume.data.title : "Experience"} description={(resume && resume.data && resume.data.description) ? resume.data.description : "All experiences"}>
@@ -9,9 +9,9 @@ const { Content } = resume ? await render(resume) : { Content: null };
     <article class="post">
       <header>
         <h1>{(resume && resume.data && resume.data.title) ? resume.data.title : "Experience"}</h1>
-        {(resume && resume.data && resume.data.publishedAt) && (
-          <time datetime={resume.data.publishedAt}>
-            {new Date(resume.data.publishedAt).toLocaleDateString("en-US", {
+        {(resume && resume.data && resume.data.latestUpdate) && (
+          <time datetime={resume.data.latestUpdate}>
+            {new Date(resume.data.latestUpdate).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
