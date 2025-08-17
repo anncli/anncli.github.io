@@ -6,7 +6,7 @@
     "sections": {
       "experience": {
         "title": "Experience",
-        "viewAllText": "View full résumé"
+        "viewAllText": "View resume"
       },
       "projects": {
         "title": "Projects",
@@ -14,7 +14,7 @@
       },
       "blog": {
         "title": "Blogs",
-        "viewAllText": "View all posts"
+        "viewAllText": "View all blogs"
       }
     },
     "socialLinks": [

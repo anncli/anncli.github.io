@@ -7,15 +7,16 @@ import Container from "../../components/ui/Container.astro";
 const projects = await getCollection("projects");
 const sortedProjects = projects.sort(
   (a: CollectionEntry<"projects">, b: CollectionEntry<"projects">) =>
-    b.data.startDate?.getTime?.() - a.data.startDate?.getTime?.()
+    b.data.date?.getTime?.() - a.data.date?.getTime?.()
 );
 ---
 
 <BaseLayout title="Projects" description="All projects">
+  <main>
   <Container>
     <section class="section">
       <div class="section-header">
-        <h2>Projects</h2>
+        <h1>Projects</h1>
       </div>
       <div class="content-list">
         {
@@ -40,10 +41,15 @@ const sortedProjects = projects.sort(
       </div>
     </section>
   </Container>
+  </main>
 </BaseLayout>
+
 <style>
-  .section {
-    margin: 4rem 0;
+  main {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 0rem;
   }
 
   .section-header {
@@ -51,7 +57,6 @@ const sortedProjects = projects.sort(
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 2rem;
-    opacity: 0.7;
   }
 
   .title-row {

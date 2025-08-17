@@ -34,6 +34,13 @@ const { Content } = resume ? await render(resume) : { Content: null };
     padding: 2rem 1.5rem;
   }
 
+  @media (max-width: 640px) {
+    main {
+      padding: 1rem;
+      padding-top: 2rem;
+    }
+  }
+
   .post {
     margin-top: 2rem;
   }
