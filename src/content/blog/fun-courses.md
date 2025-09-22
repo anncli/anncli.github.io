@@ -5,7 +5,7 @@ publishedAt: 2024-12-31
 tags: ["classes", "Columbia", "art history", "urban studies", "study abroad"]
 ---
 
-I've always believed it's important to be well-rounded intellectually and study subjects that interests me, regardless if it's in my intended field of study. One great thing about Columbia is that they encourage students to take classes outside of our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. I've gotten a chance to take some cool classes during my time at Columbia- some required, some by my own choice. Here are some of my favorite ones so far:
+I believe being well-rounded academically is important to helping me become a better decision maker and also just a more interesting person. I've always felt that taking classes in the humanities helps me unlock new ways of seeing patterns in the environment around us and interacting with the world. One great thing about Columbia is that the school encourages students to take classes outside of our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. I've gotten a chance to take some cool classes during my time at Columbia- some required, some by my own choice. Here are some of my favorite ones so far:
 
 ## Table of Contents
 - [The Roman Art of Engineering](#ahce-w4149-the-roman-art-of-engineering-traditions-of-planning-construction-and-innovation)
