@@ -3,6 +3,7 @@ import Section from "../components/ui/Section.astro";
 import { getCollection, getEntry } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import BaseLayout from "../components/layout/BaseLayout.astro";
+import { CONTENT } from "../constants/site";
 import ContentList from "../components/shared/ContentList.astro";
 import Container from "../components/ui/Container.astro";
 import renderMarkdown from "../utils/markdown";
@@ -39,7 +40,9 @@ const sortedExperiences = experiences.sort(
 );
 
 const projects = await getCollection("projects");
-const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 2);
+const featuredProjects = projects
+  .filter((project: CollectionEntry<"projects">) => project.data.featured)
+  .slice(0, CONTENT.featuredProjectsLimit);
 ---
 
 <BaseLayout title={`${site.name}'s Website`} description={site.introduction}>

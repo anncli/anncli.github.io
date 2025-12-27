@@ -10,18 +10,23 @@ Here is a brief overview of my education, experiences, projects, and skills. Con
 
 <small>Sep 2023 - May 2027</small><br>
 **Columbia University** | B.S. Computer Science<br>
-<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
+<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Natural Language Processing, Design Using C++ (taught by Bjarne Stroustrup!), Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
 <i><a href="../blog/fun-courses">Check out other interesting courses I've taken!</a></i><br>
-<u>Extracurricular</u>: Women in CS (Board Member), Girls Who Code (Board Member), Columbia Robotics Club (AV Perception Lead), Undergraduate CS Research Fair (Organizer)
+<u>Extracurricular</u>: Women in CS (Board Member), Columbia Robotics Club (AV Perception Lead), Undergraduate CS Research Fair (Organizer)
 
 <small>Jan 2025 - June 2025</small><br>
 **Universidad Carlos III de Madrid** | International Exchange Student<br>
 Coursework in Computer Science and Spanish Culture<br>
 <i><a href="../blog/study-abroad">Check out my study abroad page!</a></i>
 
+<small>Sep 2019 - June 2023</small><br>
+**International Community School** | High School Diploma<br>
+Unique, globally oriented curriculum emphasizing interdisciplinary applications across six core academic areas: humanities, international studies, arts, mathematics, sciences, and Spanish.<br>
+
 
 ## Experience
 
+### <small>Industry</small>
 <small>June 2025 - Aug 2025</small><br>
 **NVIDIA** | Software Engineer Intern
 
@@ -34,7 +39,10 @@ Coursework in Computer Science and Spanish Culture<br>
 <small>Jul 2023 - Aug 2023</small><br>
 **Jane Street** | Academy of Math and Programming Scholar
 
-### <small>Programs/Events Attended</small>
+### <small>Research</small>
+Undergraduate Research Assistant working on <a href="https://github.com/anncli/GRiD_Demo" target="_blank" rel="noopener noreferrer">GRiD (GPU-Acclerated Rigid Body Dynamics)</a>. Joint project with the Barnard Programming Languages Lab (Prof. Mark Santolucito) and Dartmouth Accessible and Accelerated Robotics Lab (Prof. Brian Plancher).
+
+### <small>Programs/Events</small>
 SIG Women's Discovery Day, SIG First-Year Discovery Day, Morgan Stanley First Year Enhancement Program Participant (Quantitative Finance Track), Harvard Undergraduate Trading Competition.
 
 
@@ -46,4 +54,4 @@ See my <a href="./projects">projects page</a> and <a href="https://github.com/an
 
 <u>Programming Languages</u>: Python, C++, C, Java<br>
 <u>Other Programming/Markup Languages I'm Familiar With</u>: HTML/CSS, Assembly, Shell Script, SQL
-<u>OS/Tools/Libraries</u>: Linux, Unix, Git, Docker, ROS 2, pandas, NumPy, React, Fio, Pytest, ELK, Google Cloud Platform
+<u>OS/Tools/Libraries</u>: Linux, Unix, Git, Docker, ROS 2, pandas, NumPy, React, Fio, Pybind11, Pytest/gtest, ELK Stack, Google Cloud

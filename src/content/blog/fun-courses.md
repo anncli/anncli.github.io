@@ -1,17 +1,33 @@
 ---
 title: "Interesting Courses I've Taken"
 description: "Fully embracing the possibilities of interdisciplinary education during university"
-publishedAt: 2024-12-31
+publishedAt: 2025-12-31
 tags: ["classes", "Columbia", "art history", "urban studies", "study abroad"]
 ---
 
-I believe being well-rounded academically is important to helping me become a better decision maker and also just a more interesting person. I've always felt that taking classes in the humanities helps me unlock new ways of seeing patterns in the environment around us and interacting with the world. One great thing about Columbia is that the school encourages students to take classes outside of our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. I've gotten a chance to take some cool classes during my time at Columbia- some required, some by my own choice. Here are some of my favorite ones so far:
+I've always been interested in a large range of subjects, and I believe being well-rounded academically makes me a better decision maker and also just a more interesting person. Taking classes in the humanities helps me unlock new ways of seeing patterns in the environment around us and interacting with the world. One great thing about Columbia is that the school encourages students to take classes outside of our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. I've gotten the chance to take some cool classes- some required, some by my own choice. Below are some of my favorite ones so far:
 
 ## Table of Contents
+- [Theatre Traditions in a Global Context](#thtr-un3154-theatre-traditions-in-a-global-context)
 - [The Roman Art of Engineering](#ahce-w4149-the-roman-art-of-engineering-traditions-of-planning-construction-and-innovation)
 - [Spanish Art Masters in Madrid Museums](#spanish-art-masters-in-madrid-museums)
 - [University Writing: Readings in Urban Studies](#engl-cc1010-university-writing-readings-in-urban-studies)
 <br>
+
+
+## THTR UN3154: Theatre Traditions in a Global Context
+
+**Semester Taken:** Fall 2025<br>
+**Instructor:** Shayoni Mitra<br>
+**Course Description:** This course aims at giving students an academic, aesthetic and embodied experience of theatre from around the world. It is an introduction to six models of theatre that have had an enormous impact on global performance – *Yoruba Ritual*, *Kabuki*, *Noh*, *Wayang Kulit*, *Kathakali*, and *Jingju*. We will closely look at each of these genres with a focus on a historical overview of its development, its stylistic elements, codes of actor training, and contemporary expressions. Students will work in groups to create a class performance based on workshops and dramatic literature we have explored together in class.
+
+**My Thoughts:** I originally signed up for this course as a placeholder and had no intention of returning after the first day. However, after attending the first class, I realized the content is actually quite interesting, and ultimately decided to stay. For each of the six styles we studied, we had a workshop taught by a master of that theatre form, which was a really unique experience that came with the priviledge of being in New York City and having access to so many amazing performers.
+
+
+Course Description Taken from Syllabus.
+<br>
+<br>
+
 
 ## AHCE W4149: The Roman Art of Engineering: Traditions of Planning, Construction, and Innovation
 
@@ -19,7 +35,7 @@ I believe being well-rounded academically is important to helping me become a be
 **Instructors:** Francesco de Angelis [Art History]; Julius Chang [Engineering]<br>
 **Course Description:** This is a flagship Cross-Disciplinary Frontiers course that provides an interdisciplinary study of ancient Roman engineering and architecture. It addresses the questions of how and why infrastructure was built and critically why these questions are relevant today. Through a holistic examination of Roman buildings, monuments and infrastructure that draws upon the fields of engineering, architecture, archaeology, and history, we will articulate principles used for the construction of roads, bridges, and aqueducts, including iconic buildings and lesser-known examples. Themes that will be addressed throughout the course include: building materials and their affordances; the organization of labor and power hierarchies; the standardization of construction procedures; the epistemological premises of technological innovation and its societal consequences; the role of failure and error; the aestheticization and politicization of engineering “feats”; engineering and empire; and dissemination and transformation of engineering knowledge beyond Roman antiquity. Special lectures will be devoted to cross-cultural comparisons with other pre-modern societies across the globe. The main body of the course is organized in the form of dual lectures. In each “couplet,” the first unit (lecture A) introduces civil engineering principles; it analyzes the Roman cases both to illustrate said principles and to discuss the specific way they were understood and put to use within the frame of pre-modern technological practices. This unit is meant to familiarize students with the basic tenets of civil engineering, as well as to expose them to key technical aspects of main Roman monuments. The second unit (lecture B) examines the same engineering principles by focusing on the specific historical and societal contexts within which they were developed and applied. This unit invites students to reflect on the impact that external circumstances have on technical— often seemingly “objective”—choices; and to learn how these choices were conceptualized and made meaningful for non-specialized audiences.
 
-**My Thoughts:** I first heard about this class during The Art of Engineering (a required seminar class for all freshmen engineering students), when one of the Civil Engineering department guest speakers briefly mentioned this class being a new option starting in a later semester. While I am neither an Art History nor a Civil Engineering major, I was very excited when I saw this course pop up on the course directory because it combines two disciplines that I've always been slightly curious about. Also, I chose to attend Columbia for this type of interdisciplinary education, and this class embodied the very thing I imagined. The class ended up being really reading-intensive and I was one of the only few non-graduate students in the class, but regardless the materials was interesting enough to keep my engaged throughout the semester. The cherry-on-top was the fact that I studied abroad in Europe the following semester, where I got to actually see many of the architectural wonders I spent the semester researching (i.e. the Pantheon) in-person.
+**My Thoughts:** I first heard about this class during The Art of Engineering (a required seminar class for all first-year engineering students), when one of the Civil Engineering department guest speakers briefly mentioned this class being a new option starting in a later semester. While I am neither an Art History nor a Civil Engineering major, I was very excited when I saw this course pop up on the course directory because it combines two disciplines that I've always been slightly curious about. Also, I chose to attend Columbia for this type of interdisciplinary education, and this class embodied the very thing I imagined. The class ended up being really reading-intensive and I was one of the only few non-graduate students in the class, but regardless the materials was interesting enough to keep my engaged throughout the semester. The cherry-on-top was the fact that I studied abroad in Europe the following semester, where I got to actually see many of the architectural wonders I spent the semester researching (i.e. the Pantheon) in-person.
 
 
 Course Description Taken from <a href="https://arthistory.columbia.edu/content/fall-2024-undergraduate-courses" target="_blank" rel="noopener noreferrer">Fall 2024 Course Offerings</a>.
