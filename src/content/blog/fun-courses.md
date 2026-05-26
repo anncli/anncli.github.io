@@ -1,17 +1,32 @@
 ---
 title: "Interesting Courses I've Taken"
 description: "Fully embracing the possibilities of interdisciplinary education during university"
-publishedAt: 2025-12-31
+publishedAt: 2026-05-25
 tags: ["classes", "Columbia", "art history", "urban studies", "study abroad"]
 ---
 
-I've always been interested in a large range of subjects, and I believe being well-rounded academically makes me a better decision maker and also just a more interesting person. Taking classes in the humanities helps me unlock new ways of seeing patterns in the environment around us and interacting with the world. One great thing about Columbia is that the school encourages students to take classes outside of our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. I've gotten the chance to take some cool classes- some required, some by my own choice. Below are some of my favorite ones so far:
+I've always been interested in a large range of subjects, and I believe being well-rounded academically makes me a better decision maker and also just a more interesting person. Taking classes outside my field of study helps me unlock new ways of seeing patterns and interacting with the world. One thing I love about Columbia is that the school encourages us to take classes outside our majors through the <a href="https://undergrad.admissions.columbia.edu/academics/college/core" target="_blank" rel="noopener noreferrer">Core Curriculum</a> and interdisciplinary course offerings. At the same time, I've also gotten the chance to take some interesting, non-traditional courses within computer science. Some of the courses below were required and others I took by my own choice, but they all cover fascinating topics that I've thoroughly enjoyed.
 
 ## Table of Contents
+- [Design Using C++](#coms-w4995-design-using-c)
 - [Theatre Traditions in a Global Context](#thtr-un3154-theatre-traditions-in-a-global-context)
 - [The Roman Art of Engineering](#ahce-w4149-the-roman-art-of-engineering-traditions-of-planning-construction-and-innovation)
 - [Spanish Art Masters in Madrid Museums](#spanish-art-masters-in-madrid-museums)
 - [University Writing: Readings in Urban Studies](#engl-cc1010-university-writing-readings-in-urban-studies)
+<br>
+
+## COMS W4995: Design Using C++
+
+**Semester Taken:** Fall 2025<br>
+**Instructor:** Bjarne Stroustrup<br>
+**Course Description:** This course will use the C++ language and some C++ libraries as examples of software design and design decisions. It is not a C++ programming course though it will use the principles and design decisions that underly the major C++ features as prime examples and see how they are expressed in actual features and libraries. The evolution of those ideals and the support offered from the earliest days until C++26 is also examined. Some experience with C++ and other languages is assumed. The book “A Tour of C++ (3rd edition)” will be read over the two weeks of the course to give the students a common foundation in C++.
+
+“Design” is not primarily a book skill; it involves a variety of principles and techniques that must be practiced for mastery. Consequently, the second half of the course is devoted to 3-person projects involving design, implementation, documentation, and presentation of projects of the students’ choice (after approval from the professor). Students are expected to attend other students’ presentations.
+
+**My Thoughts:** As a C++ enjoyer, it was a no-brainer to sign up for a class with Bjarne Stroustrup, the original designer and implementer of the C++ programming language. This course was a little different from other computer science class I've taken in that it focuses less on practical or theoretical knowledge but more on a specific way of thinking. I learned about how to "properly" utilize the vast amount of tools C++ offers from the perspective of the inventor himself, which I will take with me when making design decisions for future C++ projects. It was also a relatively small class with only around 30 students, which allowed all of us to get detailed feedback on our final projects from Professor Stroustrup himself (<a href="https://www.youtube.com/watch?v=_4LiFBLa1ns" target="_blank" rel="noopener noreferrer">link to my group's final project</a>).
+
+Course Description Taken from Syllabus.
+<br>
 <br>
 
 
@@ -72,6 +87,6 @@ Course Description Taken from <a href="https://aplicaciones.uc3m.es/cpa/generaFi
 
 As you learn to sharpen your own rhetorical and analytical skills, we will also ask questions such as: What problems can and should be addressed through city planning, urban design, and development? How might architecture and urban planning either improve or contribute to social and material problems such as inequality, segregation, and lack of access? In what ways are racial, gender, sexual, class, ability, and other identities shaped by urban life? By the end of the semester, you will know how to craft an argument, integrate multiple perspectives, demonstrate strong revision practices, and gain confidence in yourself as a public writer. You will also understand the collaborative processes that shape good writing, from written feedback to conversations and conferences.
 
-**My Thoughts:** Although University Writing is a required course for all Columbia students, I found the urban studies theme of the class to be extremely fascinating (there were nine themes to choose from and we could choose one that interested us). Studying urban studies in New York City provided a unique perspective on the subject, especially when many of the readings were based on the streets I have personally walked on. Through my research paper for this class, I got the chance to dive through Columbia's deep catalog of books and articles as well as visit my site of interest (Hudson Yards) in person to conduct an in-person survey of the area. I've always found cities fascinating, and this class helped me think more critically about the environment around me.<br>
+**My Thoughts:** Although University Writing is a required course for all Columbia students, I found the urban studies theme of the class to be quite intriguing (there were nine themes to choose from and we could choose whichever one interested us). Studying urban studies in New York City provided a unique perspective on the subject, especially when many of the readings were based on the streets and neighborhoods I have personally walked on. Through my research paper for this class, I got the chance to dive through Columbia's deep catalog of books and articles as well as visit my site of interest (The High Line) to conduct an in-person survey of the area. I've always found cities fascinating, and this class taught me to think more deeply about the city I will call home for the duration of my undergrad.<br>
 
 Course Description Taken from <a href="https://www.college.columbia.edu/core-curriculum/classes/university-writing/urban-studies" target="_blank" rel="noopener noreferrer">Core Curriculum Website</a>.
