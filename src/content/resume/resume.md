@@ -10,7 +10,7 @@ Here is a brief overview of my education, experiences, projects, and skills. Con
 
 <small>Sep 2023 - May 2027</small><br>
 **Columbia University** | B.S. Computer Science<br>
-<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Natural Language Processing, Design Using C++ (taught by Bjarne Stroustrup!), Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
+<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Computer Networks, High Performance Machine Learning, Natural Language Processing, Design Using C++ (taught by Bjarne Stroustrup!), Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
 <i><a href="../blog/fun-courses">Check out other interesting courses I've taken!</a></i><br>
 <u>Extracurricular</u>: Women in CS (Board Member), Columbia Robotics Club (AV Perception Lead), Undergraduate CS Research Fair (Organizer)
 
@@ -27,6 +27,9 @@ Unique, globally oriented curriculum emphasizing interdisciplinary applications 
 ## Experience
 
 ### <small>Industry</small>
+<small>May 2026 - Aug 2026</small><br>
+**Google** | Software Engineer Intern
+
 <small>June 2025 - Aug 2025</small><br>
 **NVIDIA** | Software Engineer Intern
 
@@ -43,7 +46,7 @@ Unique, globally oriented curriculum emphasizing interdisciplinary applications 
 Undergraduate Research Assistant working on <a href="https://github.com/anncli/GRiD_Demo" target="_blank" rel="noopener noreferrer">GRiD (GPU-Acclerated Rigid Body Dynamics)</a>. Joint project with the Barnard Programming Languages Lab (Prof. Mark Santolucito) and Dartmouth Accessible and Accelerated Robotics Lab (Prof. Brian Plancher).
 
 ### <small>Programs/Events</small>
-SIG Women's Discovery Day, SIG First-Year Discovery Day, Morgan Stanley First Year Enhancement Program Participant (Quantitative Finance Track), Harvard Undergraduate Trading Competition.
+Old Mission Ignition Program, SIG Women's Discovery Day, SIG First-Year Discovery Day, Morgan Stanley First Year Enhancement Program Participant (Quantitative Finance Track), Harvard Undergraduate Trading Competition.
 
 
 ## Projects
