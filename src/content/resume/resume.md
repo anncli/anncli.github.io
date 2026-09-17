@@ -10,9 +10,9 @@ Here is a brief overview of my education, experiences, projects, and skills. Con
 
 <small>Sep 2023 - May 2027</small><br>
 **Columbia University** | B.S. Computer Science<br>
-<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Computer Networks, High Performance Machine Learning, Natural Language Processing, Design Using C++ (taught by Bjarne Stroustrup!), Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
+<u>Relevant Coursework</u>: Data Structures and Algorithms, Operating Systems, Artificial Intelligence, Advanced (Systems) Programming in C, Fundamentals of Computer Systems, Intro to Databases, Computer Networks, High Performance Machine Learning, Natural Language Processing, Design Using C++ (taught by Bjarne Stroustrup!), Designing LLM Agents, Computer Science Theory, Linear Algebra and Probability, Multivariable Calculus, Discrete Math<br>
 <i><a href="../blog/fun-courses">Check out other interesting courses I've taken!</a></i><br>
-<u>Extracurricular</u>: Women in CS (Board Member), Columbia Robotics Club (AV Perception Lead), Undergraduate CS Research Fair (Organizer)
+<u>Extracurricular</u>: Women in CS (E-Board Operations Chair), Columbia Robotics Club (AV Perception Lead), Undergraduate CS Research Fair (Organizer)
 
 <small>Jan 2025 - June 2025</small><br>
 **Universidad Carlos III de Madrid** | International Exchange Student<br>
@@ -21,7 +21,7 @@ Coursework in Computer Science and Spanish Culture<br>
 
 <small>Sep 2019 - June 2023</small><br>
 **International Community School** | High School Diploma<br>
-Unique, globally oriented curriculum emphasizing interdisciplinary applications across six core academic areas: humanities, international studies, arts, mathematics, sciences, and Spanish.<br>
+Globally-oriented curriculum emphasizing interdisciplinary applications across six core academic areas: humanities, international studies, arts, mathematics, sciences, and Spanish.<br>
 
 
 ## Experience
