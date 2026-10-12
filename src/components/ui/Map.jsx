@@ -2,6 +2,11 @@ import React, { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
+// CARTO now requires a Basemaps API key. This is intentionally a PUBLIC Astro
+// environment variable: tile URLs are requested by the visitor's browser.
+const cartoApiKey = import.meta.env.PUBLIC_CARTO_BASEMAPS_API_KEY;
+const cartoTiles = "https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png";
+const cartoTileUrl = cartoApiKey ? `${cartoTiles}?key=${cartoApiKey}` : cartoTiles;
 
 const Map = ({ markers }) => {
   const mapRef = useRef(null);
@@ -11,8 +16,8 @@ const Map = ({ markers }) => {
   useEffect(() => {
     const map = L.map("map");
     mapRef.current = map;
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; <a href='https://carto.com/attributions'>CARTO</a>"
+    L.tileLayer(cartoTileUrl, {
+      attribution: "&copy; OpenStreetMap contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>"
     }).addTo(map);
 
     // Use explicit Leaflet icon with correct anchor
