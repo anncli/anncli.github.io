@@ -92,7 +92,7 @@ if (typeof window !== "undefined") {
   const style = document.createElement("style");
   style.innerHTML = `
     .leaflet-popup-content {
-      font-size: 0.85em;
+      font-size: 0.9em;
       line-height: 1.15;
       max-width: 15em;
       word-break: break-word;
