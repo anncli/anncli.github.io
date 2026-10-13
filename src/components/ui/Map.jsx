@@ -92,8 +92,8 @@ if (typeof window !== "undefined") {
   const style = document.createElement("style");
   style.innerHTML = `
     .leaflet-popup-content {
-      font-size: 0.85em;
-      line-height: 1.15;
+      font-size: 0.75rem;
+      line-height: 1.35;
       max-width: 15em;
       word-break: break-word;
       margin: 1em 1.2em;

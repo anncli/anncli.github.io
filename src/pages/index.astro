@@ -149,13 +149,17 @@ const featuredProjects = projects
 <style>
   main {
     width: 100%;
-    max-width: 640px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     padding: 2rem 0;
   }
 
   .hero {
     padding: 4rem 0;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.01em;
   }
 
   .introduction {
@@ -169,12 +173,24 @@ const featuredProjects = projects
     margin: 4rem 0;
   }
 
+  .section + .section {
+    padding-top: 1.5rem;
+  }
+
+  .section .muted-text {
+    max-width: 92%;
+  }
+
   .section-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 2rem;
     opacity: 0.7;
+  }
+
+  .section-header h2 {
+    font-size: 1.3125rem;
   }
 
   .title-row {
@@ -198,7 +214,7 @@ const featuredProjects = projects
   }
 
   time {
-    font-size: var(--text-xs);
+    font-size: 0.78125rem;
     opacity: 0.5;
     white-space: nowrap;
   }
@@ -257,6 +273,10 @@ const featuredProjects = projects
   }
 
   @media (max-width: 640px) {
+    .section .muted-text {
+      max-width: none;
+    }
+
     main {
       padding: 1rem 0;
     }

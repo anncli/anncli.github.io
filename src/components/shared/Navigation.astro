@@ -28,7 +28,7 @@ const isActive = (path: string) => {
 
   .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .nav-links a {
@@ -63,5 +63,11 @@ const isActive = (path: string) => {
     width: 100%;
     height: 1px;
     background: var(--text-muted);
+  }
+
+  @media (max-width: 640px) {
+    .nav-links {
+      gap: 1.5rem;
+    }
   }
 </style>
